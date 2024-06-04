@@ -1,0 +1,88 @@
+// Base
+@import "./base/reset";
+@import "./base/variables";
+@import "./base/mixins";
+
+// Main
+
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+
+  h1 {
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 5rem;
+  }
+
+  section {
+    padding: 2.5rem 0;
+
+    h2 {
+      text-align: center;
+      color: $primary-color;
+      font-size: 4rem;
+    }
+
+    p,
+    ul {
+      text-align: center;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+     
+
+      .col-md-4 {
+        @include box-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  footer {
+    background-color: $secondary-color;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  form {
+    .form-group {
+      label {
+        color: $text-color;
+      }
+
+      input {
+        border: 1px solid $primary-color;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+      }
+    }
+
+    button {
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    #subscribe-message {
+      margin-top: 1rem;
+    }
+  }
+}
